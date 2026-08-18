@@ -22,8 +22,8 @@ Hey! If you are reading this, maybe you want to know more about me. Here is my c
 
 Here is a quick access to my most significant cybersecurity projects. Feel free to dive into the technical details!
 
-*   **[Restore symbol of Go binairies]**  : [Read this article](/posts/go_symbols/)
-*   **[Jeanne d'Hack CTF]** : *My experience creating Pwn and Stego challenges for a local CTF.* -> [Read the article](/posts/jeanne_dhack_intro/)
+*   **[Restore symbol of Go binairies]**  : [Read this article](https://shennmue.github.io/blog/posts/go_symbols/)
+*   **[Jeanne d'Hack CTF]** : *My experience creating Pwn and Stego challenges for a local CTF.* -> [Read the article](https://shennmue.github.io/blog/posts/jeanne_dhack_intro/)
 
 ---
 

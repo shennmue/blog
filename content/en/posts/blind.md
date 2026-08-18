@@ -19,7 +19,7 @@ The sources and solve script for the challenge are available [here](https://gith
 
 The screen is dark ! Find why and get back the original video. 
 
-![](blind/blind.png)
+![](https://shennmue.github.io/blog/blind/blind.png)
 
 ## Write Up
 
@@ -42,7 +42,7 @@ Without these indexes, the player cannot know where the raw data starts and ends
 
 When analyzing the `stco` box:
 
-![](/blog/blind/shuffle_stco.png)
+![](https://shennmue.github.io/blog/blind/shuffle_stco.png)
 
 We notice that the offsets associated with the different chunks are out of order. However, in a standard MP4 file, these addresses within the `stco` atom must almost systematically appear in ascending order, as they follow the physical progression of the data in the `mdat` atom.
 
@@ -50,4 +50,4 @@ By simply sorting this list to put the addresses back into the correct numerical
 
 Congratulation you saved your nephew gameplay ! 
 
-![](/blog/blind/result.png)
+![](https://shennmue.github.io/blog/blind/result.png)
