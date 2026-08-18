@@ -24,7 +24,7 @@ Analyze the structure of a GIF file and retrieve the hidden flag inside it !
 
 GIF files are organized in the following way:
 
-![norme table](/gif/gif_struct.png "Titre de l'image")
+![norme table](/blog/gif/gif_struct.png "Titre de l'image")
 
 Following the ```Global Color Table``` , we find the data associated with all the images included in the GIF file. Each image therefore corresponds to a loop that includes all the components located between the ```Global Color Table``` and the ```trailer```.
 
@@ -34,13 +34,13 @@ Among these blocks, let’s study the composition of the ```Graphic Control Exte
 
 ```Graphic Control Extension``` : 
 
-o/blo![norme table](/gif/GCE.png "Titre de l'image")
+o/blo![norme table](/blog/gif/GCE.png "Titre de l'image")
 o/blo
 This optional block contains a ```Packed Fields``` byte. Bits 5, 6, and 7 are marked as "Reserved" (reserved for future use) and are normally set to zero.
 
 ```Image Descriptor``` : 
 
-![norme table](/gif/ID.png "Titre de l'image")
+![norme table](/blog/gif/ID.png "Titre de l'image")
 
 This block also contains a ```Packed Fields``` byte (located at offset 9 of the block). Here, bits 3 and 4 are defined as "Reserved".
 
@@ -54,13 +54,13 @@ There are a few subtleties to take into account. Most blocks have a fixed size, 
 
 Others have variable sizes and require a small calculation. For example:
 
-![norme table](/gif/GCT.png "Titre de l'image")
+![norme table](/blog/gif/GCT.png "Titre de l'image")
 
 The **Global Color Table** is an optional block that allows colors to be defined for all images, without them being redefined every time. In other words, it is a constant color macro.
 
 To skip this block, you need to know the value of **N**. This is located in the previous block.
 
-![norme table](/gif/LSD.png "Titre de l'image")
+![norme table](/blog/gif/LSD.png "Titre de l'image")
 
 # Exploitation
 
@@ -70,7 +70,7 @@ Thus, by retrieving all the reserved bits from each Image Descriptor and concate
 
 (The gif : 
 
-![norme table](/gif/goofy_fantasy.gif "Titre de l'image")
+![norme table](/blog/gif/goofy_fantasy.gif "Titre de l'image")
 )
 
 

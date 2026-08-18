@@ -17,14 +17,14 @@ What makes Go special is that every program embeds its own Runtime. This runtime
 
 As a result with a simple **printf("hello world")** we end up with a program containing a lot of functions. Add to that the stripping of the binary's symbols and analyzing a Go program can very quickly become extremely time consuming
 
-![](/go_sym/C.png)
+![](/blog/go_sym/C.png)
 Moreover it became very popular among malware developers because you write a Go program once and you can use it on Linux, Windows, phones etc. 
 
 However solutions exist. Every Go program hosts what we call the pclntab and it contains all the information about the functions present in the program. 
 
 And even in a basic stripped binary the memory map still shows us the start address of the pclntab.
 
-![](/go_sym/pcnltab.png)
+![](/blog/go_sym/pcnltab.png)
 
 ### Our objectif  
 
@@ -88,7 +88,7 @@ const (
 We can now link a magic byte to its version.
 The header of our binary's pclntab begins with "FF FF FF F1". It's the 1.20 version of Go.
 
-![](/go_sym/magics.png)
+![](/blog/go_sym/magics.png)
 
 Here is how the header is organized:
 
@@ -370,7 +370,7 @@ Here is a schema that summarizes evrything :
 (Green for our objectif PC and Name)
 (Dark Blue for component of pclntab)
 
-![](/go_sym/schema2.svg)
+![](/blog/go_sym/schema2.svg)
 
 
 Now we got all the theorical knowledge to parse the table, let's CODE ! 
@@ -433,7 +433,7 @@ createLabel(pc, func_name, True)
 
 After the first execution, a small problem remained. Strangely, some functions had long names with special characters, so I just replaced them with underscores.
 
-![](/go_sym/ghidra_error.png)
+![](/blog/go_sym/ghidra_error.png)
 
 I fixed this by adding this loop just before creating the label:
 
@@ -446,7 +446,7 @@ func_name = func_name.replace(i, '_')
 
 There we go we finally done !!
 
-![](/go_sym/result.png)
+![](/blog/go_sym/result.png)
 
 
 ## To conclude 

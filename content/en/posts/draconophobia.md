@@ -23,11 +23,11 @@ The goal of this challenge is to analyze and exploit the provided binary to succ
 
 By observing the main function, we notice two variables that resemble structures. Using Ghidra's automatic structure generation tool, we get:
 
-![Heap Overflow](/draco/struct.png "Heap Overflow")
+![Heap Overflow](/blog/draco/struct.png "Heap Overflow")
 
 This field initially has a size of 8 as indicated by the malloc, but no size check is performed, which introduces a heap overflow.
 
-![Heap Overflow](/draco/scanf.png "Heap Overflow")
+![Heap Overflow](/blog/draco/scanf.png "Heap Overflow")
 
 To obtain the flag, it is necessary to successfully execute the ```lvl_up``` function.
 
@@ -40,21 +40,21 @@ The idea is then to make a field of the second structure point to the ```GOT``` 
 
 Output of command ```objdump -R draconophobia``` : 
 
-![Heap Overflow](/draco/got.png "Heap Overflow")
+![Heap Overflow](/blog/draco/got.png "Heap Overflow")
 
 Output of command ```objdump -D draconophobia | grep lvl_up``` : 
 
-![Heap Overflow](/draco/lvl_up.png "Heap Overflow")
+![Heap Overflow](/blog/draco/lvl_up.png "Heap Overflow")
 
 Next, we provide, as the second argument, the address of the `lvl_up` function, which will be written in place of the `strcmp` address in the GOT. 
 During the next call to `strcmp`, the `lvl_up` function will be executed instead.
 
 Then you got this exploit : 
 
-![Heap Overflow](/draco/payload.png "Heap Overflow")
+![Heap Overflow](/blog/draco/payload.png "Heap Overflow")
 
 This way, we obtain the flag `JDHACK{41du1n_WIlL_N3ver_w!n}`.
 
 
-![Heap Overflow](/draco/draco.gif "Heap Overflow")
+![Heap Overflow](/blog/draco/draco.gif "Heap Overflow")
 
