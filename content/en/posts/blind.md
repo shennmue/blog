@@ -20,6 +20,7 @@ The sources and solve script for the challenge are available [here](https://gith
 The screen is dark ! Find why and get back the original video. 
 
 ![](https://shennmue.github.io/blog/blind/blind.png)
+<img src="/blog/go_sym/magics.png" alt="magics">
 
 ## Write Up
 
