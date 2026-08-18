@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on shenblog</title>
+    <link>http://localhost:1313/blog/posts/</link>
+    <description>Recent content in Posts on shenblog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 17 Aug 2026 00:22:17 +0200</lastBuildDate><atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is happening with Go ?</title>
+      <link>http://localhost:1313/blog/posts/go_symbols/</link>
+      <pubDate>Mon, 17 Aug 2026 00:22:17 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/go_symbols/</guid>
+      
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In fact nothing special is happening with Go, I just wanted to get your attention but I swear you won&amp;rsquo;t waste your time. Today we will talk about reverse engineering and we will dig into the guts of Go binaries. Be ready !&lt;/p&gt;
+&lt;p&gt;For context, Go is a high level language designed by Google in 2007. In the beginning the goal was to have something easier than C++ and something that compiles quickly.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Hiding a video inside a video (mp4)</title>
+      <link>http://localhost:1313/blog/posts/navy/</link>
+      <pubDate>Sun, 16 Aug 2026 21:56:50 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/navy/</guid>
+      
+      <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
+&lt;p&gt;A steganography challenge using an MP4 file to hide data. Made for Jeanne d&amp;rsquo;Hack CTF, capture the flag which take place in Rouen.&lt;/p&gt;
+&lt;p&gt;The sources and solve script for the challenge are available &lt;a href=&#34;https://github.com/shennmue/ctf_challenges/tree/main/steganography/goofy%20fantasy&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;the-pitch&#34;&gt;The Pitch&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Link is trapped in a time loop by the Calamity. He has been opening this chest for eternity, yet it remains hopelessly empty. It is up to you to analyze this dream and extract its true contents.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>A way to hide data in GIF files</title>
+      <link>http://localhost:1313/blog/posts/gif/</link>
+      <pubDate>Sun, 16 Aug 2026 21:30:04 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/gif/</guid>
+      
+      <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
+&lt;p&gt;A steganography challenge using a GIF file to hide data, created for the &lt;strong&gt;Jeanne d&amp;rsquo;Hack CTF&lt;/strong&gt;, a capture-the-flag competition that takes place in Rouen.&lt;/p&gt;
+&lt;p&gt;The sources and solve script for the challenge are available &lt;a href=&#34;https://github.com/shennmue/ctf_challenges/tree/main/steganography/goofy%20fantasy&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;the-pitch&#34;&gt;The Pitch&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You are on vacation in a distant country, but you’ve forgotten your hotel room password&amp;hellip; You wander through the city, hoping it will eventually come back to you.&lt;/p&gt;
+&lt;p&gt;The flag is hidden within the data of the &lt;code&gt;goofy_fantasy.gif&lt;/code&gt; file. You must study the GIF file structure to find it.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Magic Maze</title>
+      <link>http://localhost:1313/blog/posts/magic_maze/</link>
+      <pubDate>Sun, 16 Aug 2026 20:34:53 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/magic_maze/</guid>
+      
+      <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
+&lt;p&gt;A Pwn (Binary Exploitation) challenge focused on a Format String vulnerability.
+Made for Jeanne d&amp;rsquo;Hack CTF, capture the flag which take place in Rouen.&lt;/p&gt;
+&lt;p&gt;The sources for the challenge are here : &lt;a href=&#34;https://github.com/shennmue/ctf_challenges/tree/main/pwn/Magic%20Maze&#34;&gt;https://github.com/shennmue/ctf_challenges/tree/main/pwn/Magic%20Maze&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-pitch&#34;&gt;The Pitch&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A developer friend of yours found a box containing the first video games he ever coded, and among them was Magic Maze.
+The name caught your attention, and you decided to try it out when you got home&amp;hellip;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Draconophobia</title>
+      <link>http://localhost:1313/blog/posts/draconophobia/</link>
+      <pubDate>Sun, 16 Aug 2026 20:12:45 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/draconophobia/</guid>
+      
+      <description>&lt;p&gt;A Pwn (Binary Exploitation) challenge focused on heap corruption. Made for Jeanne d’Hack CTF, capture the flag which take place in Rouen.&lt;/p&gt;
+&lt;p&gt;The sources for the challenge are here : &lt;a href=&#34;https://github.com/shennmue/ctf_challenges/tree/main/pwn/draconophobia&#34;&gt;https://github.com/shennmue/ctf_challenges/tree/main/pwn/draconophobia&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-pitch&#34;&gt;The Pitch&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You and your friend have been sent on a mission to defeat the mountain dragon.
+This quest will reward you with experience points and fame.
+Do you accept it?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;
+&lt;p&gt;The goal of this challenge is to analyze and exploit the provided binary to successfully trigger the &lt;code&gt;lvl_up&lt;/code&gt; function and read the contents of the &lt;code&gt;flag.txt&lt;/code&gt; file.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>MP4 &#34;obfuscation&#34;</title>
+      <link>http://localhost:1313/blog/posts/blind/</link>
+      <pubDate>Sat, 15 Aug 2026 22:12:13 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/blind/</guid>
+      
+      <description>&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
+&lt;p&gt;A steganography challenge using an MP4 file to hide data, created for the &lt;strong&gt;Jeanne d&amp;rsquo;Hack CTF&lt;/strong&gt;, a capture-the-flag competition that takes place in Rouen.&lt;/p&gt;
+&lt;p&gt;The sources and solve script for the challenge are available &lt;a href=&#34;https://github.com/shennmue/ctf_challenges/tree/main/steganography/blind_distribution&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;the-pitch&#34;&gt;The Pitch&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Your nephew was thrilled to have recorded his very first video of his favorite game. &amp;gt;Unfortunately, he spilled coffee all over his laptop, and now his video isn’t loading &amp;gt;correctly anymore… Help him recover the original footage!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>CTF experience</title>
+      <link>http://localhost:1313/blog/posts/jeanne_dhack_intro/</link>
+      <pubDate>Wed, 12 Aug 2026 19:55:48 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/jeanne_dhack_intro/</guid>
+      
+      <description>&lt;p&gt;Since two years ago, I&amp;rsquo;ve had the opportunity to design challenges for the &lt;strong&gt;Jeanne d&amp;rsquo;Hack CTF&lt;/strong&gt;, a capture the flag competition that takes place in Rouen. I had already participated in CTF&amp;rsquo;s, but seeing the inside and discovering how the infrastructure is handled is a completely different experience!&lt;/p&gt;
+&lt;p&gt;Here are some of the challenges I created:&lt;/p&gt;
+&lt;h3 id=&#34;pwn&#34;&gt;PWN&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://shennmue.github.io/posts/draconophobia&#34;&gt;Draconophobia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://shennmue.github.io/posts/magic_maze&#34;&gt;Magic Maze&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;steganography&#34;&gt;Steganography&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://shennmue.github.io/posts/navy&#34;&gt;Hiding a video inside a video (mp4)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://shennmue.github.io/posts/gif&#34;&gt;A way to hide data in GIF files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://shennmue.github.io/posts/blind&#34;&gt;MP4 &amp;ldquo;obfuscation&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check out the official CTF website: &lt;a href=&#34;https://www.jeanne-hack-ctf.org/&#34;&gt;Jeanne d&amp;rsquo;Hack&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Who am I ?</title>
+      <link>http://localhost:1313/blog/posts/whoami/</link>
+      <pubDate>Mon, 10 Aug 2026 00:22:17 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/whoami/</guid>
+      
+      <description>&lt;p&gt;Hey! If you are reading this, maybe you want to know more about me. Here is my character card:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; Ali HAMMOUDI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Studies:&lt;/strong&gt; Master’s degree in cybersecurity at the University of Rouen Normandie&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Age:&lt;/strong&gt; 22 years old&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interests:&lt;/strong&gt; A lot of things: electronics, low-level stuff, steganography on video and audio file format, video games (playing and dev), hiking, mangas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;My goal in life:&lt;/strong&gt; Build my own company in reverse engineering/pentesting in a few years! But for the moment, I still have a lot to learn.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Favorite animal:&lt;/strong&gt; Blue whale I guess, so majestic.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The purpose of this blog:&lt;/strong&gt; Show some of my favorite works, projects, and ideas to have a place where everything is gathered!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-work-im-most-proud-of&#34;&gt;The work I&amp;rsquo;m most proud of&lt;/h2&gt;
+&lt;p&gt;Here is a quick access to my most significant cybersecurity projects. Feel free to dive into the technical details!&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

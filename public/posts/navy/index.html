@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Hiding a video inside a video (mp4) | shenblog</title>
+<meta property="og:title" content="Hiding a video inside a video (mp4) | shenblog" />
+<meta name="twitter:title" content="Hiding a video inside a video (mp4) | shenblog" />
+<meta itemprop="name" content="Hiding a video inside a video (mp4) | shenblog" />
+<meta name="application-name" content="Hiding a video inside a video (mp4) | shenblog" />
+<meta property="og:site_name" content="shenblog" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en" />
+<meta name="language" content="en" />
+
+  <link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/navy/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2026-08-16T21:56:50&#43;0200 />
+    <meta property="article:published_time" content=2026-08-16T21:56:50&#43;0200 />
+    <meta property="og:url" content="http://localhost:1313/blog/posts/navy/" />
+
+    
+    <meta property="og:article:author" content="Ali Hammoudi" />
+    <meta property="article:author" content="Ali Hammoudi" />
+    <meta name="author" content="Ali Hammoudi" />
+    
+    
+
+    
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Hiding a video inside a video (mp4)",
+        "author": {
+        "@type": "Person",
+        "name": "Ali Hammoudi"
+        },
+        "datePublished": "2026-08-16",
+        "description": "",
+        "wordCount":  612 ,
+        "mainEntityOfPage": "http://localhost:1313/blog/posts/navy/",
+        "dateModified": "2026-08-16",
+        "image": {
+        "@type": "ImageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "shenblog"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.164.0">
+
+    
+    <meta property="og:url" content="http://localhost:1313/blog/posts/navy/">
+	<meta property="og:site_name" content="shenblog">
+	<meta property="og:title" content="Hiding a video inside a video (mp4)">
+	<meta property="og:description" content="Context A steganography challenge using an MP4 file to hide data. Made for Jeanne d’Hack CTF, capture the flag which take place in Rouen.
+The sources and solve script for the challenge are available here.
+The Pitch Link is trapped in a time loop by the Calamity. He has been opening this chest for eternity, yet it remains hopelessly empty. It is up to you to analyze this dream and extract its true contents.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-08-16T21:56:50+02:00">
+		<meta property="article:modified_time" content="2026-08-16T21:56:50+02:00">
+
+
+    
+    
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Hiding a video inside a video (mp4)">
+	<meta name="twitter:description" content="Context A steganography challenge using an MP4 file to hide data. Made for Jeanne d’Hack CTF, capture the flag which take place in Rouen.
+The sources and solve script for the challenge are available here.
+The Pitch Link is trapped in a time loop by the Calamity. He has been opening this chest for eternity, yet it remains hopelessly empty. It is up to you to analyze this dream and extract its true contents.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/blog/posts/navy/">
+    <link href="/blog/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css" rel="stylesheet">
+    <link href="/blog/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/blog/site.webmanifest">
+
+<meta name="msapplication-config" content="/blog/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+    <meta name="color-scheme" content="light dark">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/blog/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/blog/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/blog/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/posts/whoami">
+                        About me
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/categories/">
+                        Categories
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Hiding a video inside a video (mp4)</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2026-08-16T21:56:50&#43;02:00" itemprop="datePublished"> 16 August 2026 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="context">Context</h1>
+<p>A steganography challenge using an MP4 file to hide data. Made for Jeanne d&rsquo;Hack CTF, capture the flag which take place in Rouen.</p>
+<p>The sources and solve script for the challenge are available <a href="https://github.com/shennmue/ctf_challenges/tree/main/steganography/goofy%20fantasy">here</a>.</p>
+<h2 id="the-pitch">The Pitch</h2>
+<blockquote>
+<p>Link is trapped in a time loop by the Calamity. He has been opening this chest for eternity, yet it remains hopelessly empty. It is up to you to analyze this dream and extract its true contents.</p>
+<p>The flag is hidden within an MP4 file. You must study the structure of MP4 files to find it.</p>
+</blockquote>
+<h2 id="objective">Objective</h2>
+<p>A second video track is hidden inside the first one. Find a way to extract and recover it to get the flag !</p>
+<h2 id="mp4-files-structure">MP4 file’s structure</h2>
+<p>MP4 files are organized into boxes. Each box contains other boxes, which together form the file’s ecosystem. Each one has a different purpose, a specific size, and a precise type.</p>
+<p>An important example of a box is <code>mdat</code>: this one contains all the raw data related to the file’s audio and images.</p>
+<p>A box header is always at least 8 bytes long:</p>
+<ul>
+<li>The first 4 bytes define the total Size of the box.</li>
+<li>The next 4 bytes define the Type (its name in 4 ASCII characters).</li>
+</ul>
+<p>Therefore, to navigate through the tree structure, you simply need to read the size and the name of the box. If it interests us, we “enter” it by reading the following 8 bytes; otherwise, we move forward by the size of the entire box.</p>
+<p>Here is the nesting of these boxes according to the ISO/IEC 14496-12 standard:</p>
+<p><img src="/navy/norme.png" alt=""></p>
+<p>Furthermore, generally all information related to the video is found in two <code>trak</code> atoms: one for audio data and one for video data.</p>
+<p>When an MP4 file contains multiple tracks, almost all players offer an option to switch between the different tracks contained within the same file.</p>
+<h2 id="write-up">Write Up</h2>
+<p>When using a tool to parse the entire file for a surface view (<a href="https://www.onlinemp4parser.com/">https://www.onlinemp4parser.com/</a>) we got :</p>
+<p><img src="/navy/t1.png" alt="">
+<img src="/navy/t2.png" alt=""></p>
+<p>In an MP4 file, the <code>free</code> (or <code>skip</code>) atom is a reserved or “empty” space that contains no multimedia data usable by the player. It mainly serves as a buffer zone: editing software uses it to adjust the file size or insert metadata without having to rewrite the entire content, which makes processing much faster.</p>
+<p>We notice two very strange things: first, the second <code>free</code> atom is exactly the same size as the one following the first <code>trak</code>.</p>
+<p>Firstly, a <code>free</code> atom of this size is completely unusual. As explained previously, these atoms normally serve as a buffer zone (padding) for data alignment and generally do not exceed a few bytes.</p>
+<p>Additionally, <code>trak</code> atoms are usually placed next to each other within the <code>moov</code> atom. It should also be noted that media players, when encountering a <code>free</code> atom, skip over it directly without trying to find out what it contains.</p>
+<p>We can then deduce that the <code>free</code> atom following the second <code>trak</code> was actually the track containing the flag. Only the name of the atom was changed.</p>
+<p>So, is it enough to just rename it back to <code>trak</code>?
+Actually no, we quickly realize that the data present there has been randomized. It was then necessary to copy all the data present in the last <code>free</code> atom, which is in fact a copy of the original <code>trak</code> representing the video to be recovered.</p>
+<p>Furthermore, to be sure, by analyzing the content of the second <code>free</code> atom, we found the structure of a track atom.</p>
+<p>The final step is to insert it in place of the <code>free</code> atom following the first <code>trak</code> and rename the atom to <code>trak</code>.</p>
+<p>Then here is the hidden track :</p>
+<p><img src="/navy/result.gif" alt=""></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/shennmue" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/ali-hammoudi-rouen/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2026 Ali Hammoudi.
+        
+    </small>
+</footer>
+
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/blog/js/main.js" ></script>
+
+    
+
+</body>
+</html>

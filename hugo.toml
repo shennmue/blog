@@ -1,0 +1,54 @@
+baseURL = 'https://shennmue.github.io/blog/'
+title = "shenblog"
+theme = "hugo-blog-awesome"
+defaultContentLanguage = "en" # L'anglais est maintenant la langue par défaut
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+############################## English Parameters ##############################
+[Languages.en]
+  contentDir = "content/en" # Vos articles devront être placés dans content/en/posts/
+  weight = 1
+
+  # Navigation menu
+  [Languages.en.menu]
+  [[Languages.en.menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 10
+
+  [[Languages.en.menu.main]]
+    name = 'Categories'
+    url = '/categories/'
+    weight = 40
+
+  [[Languages.en.menu.main]]
+    name = 'About me'
+    url = '/posts/whoami'
+    weight = 40
+
+# Global site parameters
+[Languages.en.params]
+  label = "English"
+  locale = "en-US"
+  sitename = "shenblog"
+  defaultColor = "auto"
+  mainSections = ['posts']
+  dateFormat = "2 January 2006"
+
+  [Languages.en.params.author]
+    avatar = "avatar.jpg" # J'ai mis .png suite à votre message précédent (remettez .jpg si besoin)
+    intro = "Welcome to shenblog"
+    name = "Ali Hammoudi"
+    description = "In this blog, you will find some of my creations and projects I've worked on, enjoy!"
+
+# Social icons
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/shennmue"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/ali-hammoudi-rouen/" # N'oublie pas de remplacer par ton vrai lien LinkedIn !
+
