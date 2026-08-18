@@ -376,12 +376,15 @@ Here is a schema that summarizes evrything :
 Now we got all the theorical knowledge to parse the table, let's CODE ! 
 ## A little Jhydra introduction 
 
-(Jhydra means nothing, I just like how the word sounds ;). But more seriously, I already wrote Ghidra scripts for previous work, so it didn't take me much time. The Ghidra Flat API is very well documented, and for each task of the algorithm, you will find the method that handles it. 
+(Jhydra means nothing, I just like how the word sounds ;). 
 
-We will use Jython, and here is the documentation for all the functions we need: [https://ghidra.re/ghidra_docs/api/ghidra/program/flatapi/FlatProgramAPI.html](https://ghidra.re/ghidra_docs/api/ghidra/program/flatapi/FlatProgramAPI.html)
+But more seriously, the Ghidra Flat API is extremely well documented. For every task our algorithm needs to perform, you will find a built-in method ready to handle it.
 
-Let's begin by writing the algorithm. 
-We will take the schema below as a reference to do it
+We will be using Jython, which is essentially a mix between Java and Python. It is commonly used to write Ghidra scripts to automate tasks like creating labels at specific addresses, manipulating program memory, analyzing instructions, and much more.
+
+Here is the documentation for all the functions we will need:[https://ghidra.re/ghidra_docs/api/ghidra/program/flatapi/FlatProgramAPI.html](https://ghidra.re/ghidra_docs/api/ghidra/program/flatapi/FlatProgramAPI.html)
+
+Let's begin by writing the algorithm. We will take the schema below as a reference to map out our logic :
 
 ```go
 START = getAddress(pcnltab)
