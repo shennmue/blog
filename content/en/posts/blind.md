@@ -19,7 +19,7 @@ The sources and solve script for the challenge are available [here](https://gith
 
 The screen is dark ! Find why and get back the original video. 
 
-![](/blog/blind/blind.png)
+![](blind/blind.png)
 
 ## Write Up
 

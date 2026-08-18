@@ -1,4 +1,5 @@
 baseURL = 'https://shennmue.github.io/blog/'
+canonifyURLs = true
 title = "shenblog"
 theme = "hugo-blog-awesome"
 defaultContentLanguage = "en"
