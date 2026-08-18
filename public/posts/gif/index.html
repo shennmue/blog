@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<html lang="en-US"><head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,8 +15,8 @@
 <meta property="og:description" content="" />
 <meta name="twitter:description" content="" />
 
-<meta property="og:locale" content="en" />
-<meta name="language" content="en" />
+<meta property="og:locale" content="en-US" />
+<meta name="language" content="en-US" />
 
   <link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/gif/" title="" />
 
@@ -78,7 +78,7 @@
 The sources and solve script for the challenge are available here.
 The Pitch You are on vacation in a distant country, but you’ve forgotten your hotel room password… You wander through the city, hoping it will eventually come back to you.
 The flag is hidden within the data of the goofy_fantasy.gif file. You must study the GIF file structure to find it.">
-	<meta property="og:locale" content="en">
+	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-08-16T21:30:04+02:00">
@@ -134,7 +134,7 @@ The flag is hidden within the data of the goofy_fantasy.gif file. You must study
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
 stroke-linejoin="round" class="feather feather-home">
-<title></title>
+<title>Home</title>
 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
 <polyline points="9 22 9 12 15 12 15 22"></polyline>
 </svg>
@@ -153,6 +153,13 @@ stroke-linejoin="round" class="feather feather-home">
                 <li>
                     <a class="menu-link " href="/blog/">
                         Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/posts/">
+                        All posts
                     </a>
                     
                 </li>
@@ -214,31 +221,31 @@ stroke-linejoin="round" class="feather feather-home">
 <p>Analyze the structure of a GIF file and retrieve the hidden flag inside it !</p>
 <h2 id="write-up">Write Up</h2>
 <p>GIF files are organized in the following way:</p>
-<p><img src="/gif/gif_struct.png" alt="norme table" title="Titre de l&#39;image"></p>
+<p><img src="https://shennmue.github.io/blog/gif/gif_struct.png" alt="norme table" title="Titre de l'image"></p>
 <p>Following the <code>Global Color Table</code> , we find the data associated with all the images included in the GIF file. Each image therefore corresponds to a loop that includes all the components located between the <code>Global Color Table</code> and the <code>trailer</code>.</p>
 <p>The trailer is the byte that marks the end of the GIF file: 0x3B.</p>
 <p>Among these blocks, let’s study the composition of the <code>Graphic Control Extension</code>, as well as the <code>Image Descriptors</code> :</p>
 <p><code>Graphic Control Extension</code> :</p>
-<p>o/blo<img src="/gif/GCE.png" alt="norme table" title="Titre de l&#39;image">
+<p>o/blo<img src="https://shennmue.github.io/blog/gif/GCE.png" alt="norme table" title="Titre de l'image">
 o/blo
 This optional block contains a <code>Packed Fields</code> byte. Bits 5, 6, and 7 are marked as &ldquo;Reserved&rdquo; (reserved for future use) and are normally set to zero.</p>
 <p><code>Image Descriptor</code> :</p>
-<p><img src="/gif/ID.png" alt="norme table" title="Titre de l&#39;image"></p>
+<p><img src="https://shennmue.github.io/blog/gif/ID.png" alt="norme table" title="Titre de l'image"></p>
 <p>This block also contains a <code>Packed Fields</code> byte (located at offset 9 of the block). Here, bits 3 and 4 are defined as &ldquo;Reserved&rdquo;.</p>
 <p>Both components possess &ldquo;unused&rdquo; bits where data can be discreetly introduced without altering the file&rsquo;s rendering. However, the documentation indicates that the Graphic Control Extension block is optional. A GIF file can theoretically contain none at all.</p>
 <h2 id="parsing-gif-file">Parsing Gif file</h2>
 <p>To verify the values of these different bits, a parser must be written. You can find a diagrammed summary of the GIF89a standard at this address: <a href="https://giflib.sourceforge.net/whatsinagif/bits_and_bytes.html">https://giflib.sourceforge.net/whatsinagif/bits_and_bytes.html</a>.</p>
 <p>There are a few subtleties to take into account. Most blocks have a fixed size, so you simply need to skip over the block once its signature is identified.</p>
 <p>Others have variable sizes and require a small calculation. For example:</p>
-<p><img src="/gif/GCT.png" alt="norme table" title="Titre de l&#39;image"></p>
+<p><img src="https://shennmue.github.io/blog/gif/GCT.png" alt="norme table" title="Titre de l'image"></p>
 <p>The <strong>Global Color Table</strong> is an optional block that allows colors to be defined for all images, without them being redefined every time. In other words, it is a constant color macro.</p>
 <p>To skip this block, you need to know the value of <strong>N</strong>. This is located in the previous block.</p>
-<p><img src="/gif/LSD.png" alt="norme table" title="Titre de l&#39;image"></p>
+<p><img src="https://shennmue.github.io/blog/gif/LSD.png" alt="norme table" title="Titre de l'image"></p>
 <h1 id="exploitation">Exploitation</h1>
 <p>Once parsed, it is noticeable that these reserved bits only fluctuate starting from image and only within the Image Descriptors.</p>
 <p>Thus, by retrieving all the reserved bits from each Image Descriptor and concatenating them, the flag is recovered in ASCII format.</p>
 <p>(The gif :</p>
-<p><img src="/gif/goofy_fantasy.gif" alt="norme table" title="Titre de l&#39;image">
+<p><img src="https://shennmue.github.io/blog/gif/goofy_fantasy.gif" alt="norme table" title="Titre de l'image">
 )</p>
 
             </div>
@@ -270,7 +277,7 @@ This optional block contains a <code>Packed Fields</code> byte. Bits 5, 6, and 7
 </div>
     <small class="footer_copyright">
         © 2026 Ali Hammoudi.
-        
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
     </small>
 </footer>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<html lang="en-US"><head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,8 +15,8 @@
 <meta property="og:description" content="" />
 <meta name="twitter:description" content="" />
 
-<meta property="og:locale" content="en" />
-<meta name="language" content="en" />
+<meta property="og:locale" content="en-US" />
+<meta name="language" content="en-US" />
 
   <link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/navy/" title="" />
 
@@ -77,7 +77,7 @@
 	<meta property="og:description" content="Context A steganography challenge using an MP4 file to hide data. Made for Jeanne d’Hack CTF, capture the flag which take place in Rouen.
 The sources and solve script for the challenge are available here.
 The Pitch Link is trapped in a time loop by the Calamity. He has been opening this chest for eternity, yet it remains hopelessly empty. It is up to you to analyze this dream and extract its true contents.">
-	<meta property="og:locale" content="en">
+	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-08-16T21:56:50+02:00">
@@ -132,7 +132,7 @@ The Pitch Link is trapped in a time loop by the Calamity. He has been opening th
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
 stroke-linejoin="round" class="feather feather-home">
-<title></title>
+<title>Home</title>
 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
 <polyline points="9 22 9 12 15 12 15 22"></polyline>
 </svg>
@@ -151,6 +151,13 @@ stroke-linejoin="round" class="feather feather-home">
                 <li>
                     <a class="menu-link " href="/blog/">
                         Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/posts/">
+                        All posts
                     </a>
                     
                 </li>
@@ -220,13 +227,13 @@ stroke-linejoin="round" class="feather feather-home">
 </ul>
 <p>Therefore, to navigate through the tree structure, you simply need to read the size and the name of the box. If it interests us, we “enter” it by reading the following 8 bytes; otherwise, we move forward by the size of the entire box.</p>
 <p>Here is the nesting of these boxes according to the ISO/IEC 14496-12 standard:</p>
-<p><img src="/navy/norme.png" alt=""></p>
+<p><img src="https://shennmue.github.io/blog/navy/norme.png" alt=""></p>
 <p>Furthermore, generally all information related to the video is found in two <code>trak</code> atoms: one for audio data and one for video data.</p>
 <p>When an MP4 file contains multiple tracks, almost all players offer an option to switch between the different tracks contained within the same file.</p>
 <h2 id="write-up">Write Up</h2>
 <p>When using a tool to parse the entire file for a surface view (<a href="https://www.onlinemp4parser.com/">https://www.onlinemp4parser.com/</a>) we got :</p>
-<p><img src="/navy/t1.png" alt="">
-<img src="/navy/t2.png" alt=""></p>
+<p><img src="https://shennmue.github.io/blog/navy/t1.png" alt="">
+<img src="https://shennmue.github.io/blog/navy/t2.png" alt=""></p>
 <p>In an MP4 file, the <code>free</code> (or <code>skip</code>) atom is a reserved or “empty” space that contains no multimedia data usable by the player. It mainly serves as a buffer zone: editing software uses it to adjust the file size or insert metadata without having to rewrite the entire content, which makes processing much faster.</p>
 <p>We notice two very strange things: first, the second <code>free</code> atom is exactly the same size as the one following the first <code>trak</code>.</p>
 <p>Firstly, a <code>free</code> atom of this size is completely unusual. As explained previously, these atoms normally serve as a buffer zone (padding) for data alignment and generally do not exceed a few bytes.</p>
@@ -237,7 +244,7 @@ Actually no, we quickly realize that the data present there has been randomized.
 <p>Furthermore, to be sure, by analyzing the content of the second <code>free</code> atom, we found the structure of a track atom.</p>
 <p>The final step is to insert it in place of the <code>free</code> atom following the first <code>trak</code> and rename the atom to <code>trak</code>.</p>
 <p>Then here is the hidden track :</p>
-<p><img src="/navy/result.gif" alt=""></p>
+<p><img src="https://shennmue.github.io/blog/navy/result.gif" alt=""></p>
 
             </div>
         </article></main>
@@ -268,7 +275,7 @@ Actually no, we quickly realize that the data present there has been randomized.
 </div>
     <small class="footer_copyright">
         © 2026 Ali Hammoudi.
-        
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
     </small>
 </footer>
 
