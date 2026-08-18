@@ -26,30 +26,30 @@ The goal of this challenge is to analyze and exploit the provided binary by leve
 The goal of the challenge was to exploit a Format String vulnerability. This occurs when a call to the printf function is made without using a format string, passing user input directly as an argument instead. If the user injects format specifiers (like %x, %s, or %n)  they can arbitrarily read or write to the program's memory
 In the main function, we notice a call to handle_direction :
 
-![Heap Overflow](/blog/maze/handle.png "Heap Overflow") 
+![Heap Overflow](/maze/handle.png "Heap Overflow") 
 
 At the beginning of this function, an array is defined containing all possible movements :
 
-![Heap Overflow](/blog/maze/direction.png "Heap Overflow") 
+![Heap Overflow](/maze/direction.png "Heap Overflow") 
 
 When a user inputs something other than one of the four directional arrows, their input is displayed as is :
 
-![Heap Overflow](/blog/maze/string.png "Heap Overflow") 
+![Heap Overflow](/maze/string.png "Heap Overflow") 
 
 This is where the vulnerability lies. mvwprintw works like printf; by displaying user input without a format string, we can read the program's memory. Furthermore, during the first attempt, the chosen direction i is stored in a variable via the call to random_choice :
 
-![Heap Overflow](/blog/maze/random_choice.png "Heap Overflow") 
+![Heap Overflow](/maze/random_choice.png "Heap Overflow") 
 
-![Heap Overflow](/blog/maze/random_choice_func.png "Heap Overflow") 
+![Heap Overflow](/maze/random_choice_func.png "Heap Overflow") 
 
 At each iteration, the return value of random_choice ends up on the stack. If we leak the memory, we can recover each position from the first phase by using an input like
 ```%p.%p.%p.%p.%p.%p.%p.%p.%p.%p```, we then get the following output:
 
-![Heap Overflow](/blog/maze/res.png "Heap Overflow") 
+![Heap Overflow](/maze/res.png "Heap Overflow") 
 
 Finally thanks to the array defined earlier we can deduce the correct movements to use during the second chance given by the mage, and we obtain the flag.
 
-![Heap Overflow](/blog/maze/flag.png "Heap Overflow") 
+![Heap Overflow](/maze/flag.png "Heap Overflow") 
 
 ### Annexe 
 
@@ -57,8 +57,8 @@ This year, the theme of the CTF was video games. I tried to make this challenge 
 
 Here are some other pics :
 
-![Heap Overflow](/blog/maze/intro.png "Heap Overflow") 
-![Heap Overflow](/blog/maze/first_part.png "Heap Overflow") 
-![Heap Overflow](/blog/maze/second_part.png "Heap Overflow") 
-![Heap Overflow](/blog/maze/end.png "Heap Overflow") 
+![Heap Overflow](/maze/intro.png "Heap Overflow") 
+![Heap Overflow](/maze/first_part.png "Heap Overflow") 
+![Heap Overflow](/maze/second_part.png "Heap Overflow") 
+![Heap Overflow](/maze/end.png "Heap Overflow") 
 

@@ -36,7 +36,7 @@ Therefore, to navigate through the tree structure, you simply need to read the s
 
 Here is the nesting of these boxes according to the ISO/IEC 14496-12 standard:
 
-![](/blog/navy/norme.png)
+![](/navy/norme.png)
 
 Furthermore, generally all information related to the video is found in two `trak` atoms: one for audio data and one for video data.
 
@@ -46,8 +46,8 @@ When an MP4 file contains multiple tracks, almost all players offer an option to
 
 When using a tool to parse the entire file for a surface view (https://www.onlinemp4parser.com/) we got :
 
-![](/blog/navy/t1.png)
-![](/blog/navy/t2.png)
+![](/navy/t1.png)
+![](/navy/t2.png)
 
 In an MP4 file, the `free` (or `skip`) atom is a reserved or “empty” space that contains no multimedia data usable by the player. It mainly serves as a buffer zone: editing software uses it to adjust the file size or insert metadata without having to rewrite the entire content, which makes processing much faster.
 
@@ -68,4 +68,4 @@ The final step is to insert it in place of the `free` atom following the first `
 
 Then here is the hidden track : 
 
-![](/blog/navy/result.gif)
+![](/navy/result.gif)

@@ -1,8 +1,7 @@
-baseURL = 'https://shennmue.github.io'
-relativeURLs = true 
+baseURL = 'https://shennmue.github.io/blog/'
 title = "shenblog"
 theme = "hugo-blog-awesome"
-defaultContentLanguage = "en" 
+defaultContentLanguage = "en"
 
 [markup.goldmark.renderer]
   unsafe = true
