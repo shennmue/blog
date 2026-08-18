@@ -1,15 +1,15 @@
-baseURL = 'https://shennmue.github.io/blog/'
+baseURL = 'https://shennmue.github.io'
+relativeURLs = true 
 title = "shenblog"
 theme = "hugo-blog-awesome"
-relativeURLs = true 
-defaultContentLanguage = "en" # L'anglais est maintenant la langue par défaut
+defaultContentLanguage = "en" 
 
 [markup.goldmark.renderer]
   unsafe = true
 
 ############################## English Parameters ##############################
 [Languages.en]
-  contentDir = "content/en" # Vos articles devront être placés dans content/en/posts/
+  contentDir = "content/en" 
   weight = 1
 
   # Navigation menu
@@ -39,7 +39,7 @@ defaultContentLanguage = "en" # L'anglais est maintenant la langue par défaut
   dateFormat = "2 January 2006"
 
   [Languages.en.params.author]
-    avatar = "avatar.jpg" # J'ai mis .png suite à votre message précédent (remettez .jpg si besoin)
+    avatar = "avatar.jpg"
     intro = "Welcome to shenblog"
     name = "Ali Hammoudi"
     description = "In this blog, you will find some of my creations and projects I've worked on, enjoy!"
@@ -51,5 +51,5 @@ url = "https://github.com/shennmue"
 
 [[params.socialIcons]]
 name = "linkedin"
-url = "https://www.linkedin.com/in/ali-hammoudi-rouen/" # N'oublie pas de remplacer par ton vrai lien LinkedIn !
+url = "https://www.linkedin.com/in/ali-hammoudi-rouen/"
 
