@@ -1,6 +1,7 @@
 baseURL = 'https://shennmue.github.io/blog/'
 title = "shenblog"
 theme = "hugo-blog-awesome"
+relativeURLs = true 
 defaultContentLanguage = "en" # L'anglais est maintenant la langue par défaut
 
 [markup.goldmark.renderer]
