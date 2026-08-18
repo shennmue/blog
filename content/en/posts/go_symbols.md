@@ -17,7 +17,7 @@ What makes Go special is that every program embeds its own Runtime. This runtime
 
 As a result with a simple **printf("hello world")** we end up with a program containing a lot of functions. Add to that the stripping of the binary's symbols and analyzing a Go program can very quickly become extremely time consuming
 
-![](/go_sym/C.png)
+![](go_sym/C.png)
 Moreover it became very popular among malware developers because you write a Go program once and you can use it on Linux, Windows, phones etc. 
 
 However solutions exist. Every Go program hosts what we call the pclntab and it contains all the information about the functions present in the program. 
