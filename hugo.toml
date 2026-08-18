@@ -1,55 +1,51 @@
 baseURL = 'https://shennmue.github.io/blog/'
-canonifyURLs = true
 title = "shenblog"
 theme = "hugo-blog-awesome"
+languageCode = "en-US"
 defaultContentLanguage = "en"
+contentDir = "content/en" # Indique à Hugo que tes articles sont dans ce dossier
 
 [markup.goldmark.renderer]
-  unsafe = true
+  unsafe = true # Indispensable pour que tes balises <img> fonctionnent !
 
-############################## English Parameters ##############################
-[Languages.en]
-  contentDir = "content/en" 
-  weight = 1
-
-  # Navigation menu
-  [Languages.en.menu]
-  [[Languages.en.menu.main]]
+[menu]
+  [[menu.main]]
     name = 'Home'
     url = '/'
     weight = 10
 
-  [[Languages.en.menu.main]]
+  [[menu.main]]
     name = 'Categories'
     url = '/categories/'
     weight = 40
 
-  [[Languages.en.menu.main]]
+  [[menu.main]]
+    name = 'All posts'
+    url = '/posts/'
+    weight = 20
+
+  [[menu.main]]
     name = 'About me'
     url = '/posts/whoami'
     weight = 40
 
-# Global site parameters
-[Languages.en.params]
-  label = "English"
-  locale = "en-US"
+
+[params]
   sitename = "shenblog"
   defaultColor = "auto"
   mainSections = ['posts']
   dateFormat = "2 January 2006"
 
-  [Languages.en.params.author]
-    avatar = "avatar.jpg"
+  [params.author]
+    avatar = "avatar.jpg" 
     intro = "Welcome to shenblog"
     name = "Ali Hammoudi"
     description = "In this blog, you will find some of my creations and projects I've worked on, enjoy!"
 
-# Social icons
 [[params.socialIcons]]
-name = "github"
-url = "https://github.com/shennmue"
+  name = "github"
+  url = "https://github.com/shennmue"
 
 [[params.socialIcons]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/ali-hammoudi-rouen/"
-
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/ali-hammoudi-rouen/"

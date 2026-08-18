@@ -433,7 +433,7 @@ createLabel(pc, func_name, True)
 
 After the first execution, a small problem remained. Strangely, some functions had long names with special characters, so I just replaced them with underscores.
 
-![](/blog/go_sym/ghidra_error.png)
+![](https://shennmue.github.io/blog/go_sym/ghidra_error.png)
 
 I fixed this by adding this loop just before creating the label:
 
@@ -446,7 +446,7 @@ func_name = func_name.replace(i, '_')
 
 There we go we finally done !!
 
-![](/blog/go_sym/result.png)
+![](https://shennmue.github.io/blog/go_sym/result.png)
 
 
 ## To conclude 
