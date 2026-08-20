@@ -25,7 +25,7 @@ The screen is dark ! Find why and get back the original video.
 
 There are several reasons why an MP4 player might fail to display any image while still playing the audio track. In this case, we need to focus on the `stco` atom (Chunk Offset Box).
 
-The MP4 structure file is explained in [this article](/posts/navy/#mp4-file-structure).
+The MP4 structure file is explained in [this article](https://shennmue.github.io/blog/posts/navy/#mp4-file-structure).
 
 This is one of the most important atoms, as it indicates for each video chunk which offset within the `mdat` atom to go to in order to find the corresponding data.
 
