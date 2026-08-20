@@ -21,11 +21,30 @@ The screen is dark ! Find why and get back the original video.
 
 ![](https://shennmue.github.io/blog/blind/blind.png)
 
+
+## MP4 file’s structure
+
+MP4 files are organized into boxes. Each box contains other boxes, which together form the file’s ecosystem. Each one has a different purpose, a specific size, and a precise type.
+
+An important example of a box is `mdat`: this one contains all the raw data related to the file’s audio and images.
+
+A box header is always at least 8 bytes long:
+* The first 4 bytes define the total Size of the box.
+* The next 4 bytes define the Type (its name in 4 ASCII characters).
+
+Therefore, to navigate through the tree structure, you simply need to read the size and the name of the box. If it interests us, we “enter” it by reading the following 8 bytes; otherwise, we move forward by the size of the entire box.
+
+Here is the nesting of these boxes according to the ISO/IEC 14496-12 standard:
+
+![](https://shennmue.github.io/blog/navy/norme.png)
+
+Furthermore, generally all information related to the video is found in two `trak` atoms: one for audio data and one for video data.
+
+When an MP4 file contains multiple tracks, almost all players offer an option to switch between the different tracks contained within the same file.
+
 ## Write Up
 
 There are several reasons why an MP4 player might fail to display any image while still playing the audio track. In this case, we need to focus on the `stco` atom (Chunk Offset Box).
-
-The MP4 structure file is explained in [this article](https://shennmue.github.io/blog/posts/navy/#MP4-file's-structure).
 
 This is one of the most important atoms, as it indicates for each video chunk which offset within the `mdat` atom to go to in order to find the corresponding data.
 
