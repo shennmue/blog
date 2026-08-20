@@ -1,9 +1,9 @@
 +++
-date = '2026-08-17T00:22:17+02:00'
+date = 2026-08-17T00:22:17+02:00
 draft = false
-title = 'What is happening with Go ?'
+title = 'What is happening with Go?'
 toc = true
-isStarred= true
+isStarred = true
 categories = ['Reverse Engineering']
 +++
 
