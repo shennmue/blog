@@ -1,24 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Reverse Engineering on shenblog</title>
-    <link>http://localhost:1313/blog/categories/reverse-engineering/</link>
-    <description>Recent content in Reverse Engineering on shenblog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Mon, 17 Aug 2026 00:22:17 +0200</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>What is happening with Go ?</title>
-      <link>http://localhost:1313/blog/posts/go_symbols/</link>
-      <pubDate>Mon, 17 Aug 2026 00:22:17 +0200</pubDate>
-      
-      <guid>http://localhost:1313/blog/posts/go_symbols/</guid>
-      
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reverse Engineering on shenblog</title><link>https://shennmue.github.io/blog/categories/reverse-engineering/</link><description>Recent content in Reverse Engineering on shenblog</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Mon, 17 Aug 2026 00:22:17 +0200</lastBuildDate><atom:link href="https://shennmue.github.io/blog/categories/reverse-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>What is happening with Go?</title><link>https://shennmue.github.io/blog/posts/go_symbols/</link><pubDate>Mon, 17 Aug 2026 00:22:17 +0200</pubDate><guid>https://shennmue.github.io/blog/posts/go_symbols/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In fact nothing special is happening with Go, I just wanted to get your attention but I swear you won&amp;rsquo;t waste your time. Today we will talk about reverse engineering and we will dig into the guts of Go binaries. Be ready !&lt;/p&gt;
-&lt;p&gt;For context, Go is a high level language designed by Google in 2007. In the beginning the goal was to have something easier than C++ and something that compiles quickly.&lt;/p&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;For context, Go is a high level language designed by Google in 2007. In the beginning the goal was to have something easier than C++ and something that compiles quickly.&lt;/p&gt;</description></item></channel></rss>
